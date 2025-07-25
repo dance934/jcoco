@@ -72,19 +72,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>prepare-agent-integration</id>
-                        <goals>
-                            <goal>prepare-agent-integration</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>report-integration</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -96,7 +84,7 @@
                             <goal>report-aggregate</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.basedir}/target/site</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/site/jacoco</outputDirectory>
                             <dataFileIncludes>
                                 <dataFileInclude>**/jacoco.exec</dataFileInclude>
                             </dataFileIncludes>
