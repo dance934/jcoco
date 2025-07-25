@@ -56,6 +56,11 @@
                     <artifactId>maven-surefire-report-plugin</artifactId>
                     <version>3.5.3</version>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-report-plugin</artifactId>
+                    <version>3.5.3</version>
+                </plugin>
             </plugins>
         </pluginManagement>
         <plugins>
@@ -84,21 +89,21 @@
                     <execution>
                         <id>report-integration</id>
                         <goals>
-                            <goal>report-integration</goal>
+                            <goal>report</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>default-report-aggregate</id>
+                        <id>report-aggregate</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>report-aggregate</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.reporting.outputDirectory}/jacoco-aggregate</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/site/jacoco-aggregate</outputDirectory>
                             <dataFileIncludes>
                                 <dataFileInclude>**/jacoco.exec</dataFileInclude>
                             </dataFileIncludes>
-                        </configuration>
+                    </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -116,4 +121,4 @@
             </plugin>
         </plugins>
     </build>
-</project>
+</project>    
