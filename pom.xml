@@ -96,7 +96,7 @@
                             <goal>report-aggregate</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.basedir}/target/site/jacoco-aggregate</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/site</outputDirectory>
                             <dataFileIncludes>
                                 <dataFileInclude>**/jacoco.exec</dataFileInclude>
                             </dataFileIncludes>
