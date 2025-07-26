@@ -15,6 +15,10 @@ org.apache.maven.plugins:maven-failsafe-plugin:3.5.3
 org.apache.maven.plugins:maven-surefire-report-plugin:3.5.3
 
 
+# jacoco 指令
+java -jar .\lib\lib\jacococli.jar report .\target\jacoco-agg.exec --classfiles .\module-a\target\classes\ --classfiles .\module-b\target\classes\ --classfiles .\module-c\target\classes\ --html .\target\jacoco-html
 
+# jacoco jar 
+https://www.jacoco.org/jacoco/
 
 
