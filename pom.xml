@@ -98,6 +98,23 @@
                         </configuration>
                     </execution>
 
+                    <execution>
+                        <id>generate-merged-report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>target/classes</include>
+                                <include>module-a/target/classes</include>
+                                <include>module-b/target/classes</include>
+                                <include>module-c/target/classes</include>
+                            </includes>
+                            <dataFile>target/jacoco-agg.exec</dataFile>
+                        </configuration>
+                    </execution>
+
 
                     <execution>
                         <id>report-aggregate</id>
@@ -106,8 +123,12 @@
                             <goal>report-aggregate</goal>
                         </goals>
                         <configuration>
+                            <includes>
+                                <include>**/target/classes</include>
+                            </includes>
                             <dataFileIncludes>
                                 <dataFileInclude>**/jacoco.exec</dataFileInclude>
+                                <dataFileInclude>**/jacoco-agg.exec</dataFileInclude>
                             </dataFileIncludes>
                         </configuration>
                     </execution>
