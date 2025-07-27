@@ -99,7 +99,7 @@
                             <goal>failsafe-report-only</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/../../module-report/target/reportsss</outputDirectory>
+                            <outputDirectory>${project.build.directory}/../module-report/reports</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>

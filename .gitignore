@@ -1,4 +1,5 @@
 test/
+module-report/reports/
 
 # Compiled class file
 *.class
